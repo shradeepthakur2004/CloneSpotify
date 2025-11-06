@@ -1,0 +1,437 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin:0 ;
+    background-color: black;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar{
+    width: 340px;
+    border-radius: 1rem;
+    background-color: #000;
+    margin-right:0.5rem ;
+}
+
+.main-content{
+     flex: 1;
+     border-radius: 1rem;
+     overflow: auto;
+     background-color: #121212;
+     padding: 0 1.5rem 0 1.5rem;
+}
+
+.music-player{
+    background-color:black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 72px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option{
+   line-height: 2.5rem;
+   opacity: 0.7;
+ padding: 0.5rem 0.75rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+
+.nav-option i{
+   font-size: 1.25rem;
+}
+
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library{
+    background-color: #121212;
+    border-radius :1rem;
+    height: 100%;
+    margin-top:0.5rem ;
+    padding: 0.5rem 0.75rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons{
+    display: flex;
+}
+
+.lib-option img{
+   height: 1.5rem;
+   width: 1.5rem;
+}
+
+.icons{
+    font-size: 1.25rem;
+    opacity: 0.7;
+    margin-right: 1rem;
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+.box{
+    height: 8rem;
+    background-color: #232323;
+    border-radius: 0.8rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.badge{
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+ 
+    width: fit-content;
+    margin-top: 0.5rem;
+    height: 1.5rem;
+}
+
+.sticky_nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0 1rem;
+    z-index: 1;
+}
+
+.sticky-nav-icons {
+     margin-left:0.75rem ;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+    margin-right: 1rem;
+}
+
+.dark-badge{
+    background-color: #000;
+    color: white;
+}
+
+@media(max-width:1000px)
+{
+    .hide{
+        display: none;
+    }
+}
+
+.card{
+    background-color: #232323;
+    width: 190px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    transition : background-color 2s linear;
+}
+
+.card:hover{
+    background-color: #3e3d3d;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-title{
+    font-weight: 600;
+}
+
+.card-information{
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+
+.footer-line{
+    height:300px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 90%;
+    height:2%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.footer-line-description{
+   margin: auto;
+}
+
+
+.footer-section{
+    margin-top:7rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-footer{
+    margin-top: 1rem;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:1rem;
+}
+
+.footer-heading{
+ padding: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-list-items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 1rem;
+}
+
+.footer-item-link{
+    color:rgb(170, 165, 165);
+}
+
+.footer-item-link:hover{
+    color: white;
+    text-decoration: underline white solid;
+}
+
+.right-footer{
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    gap: 1.2rem;
+}
+
+.footer-icon{
+    height: 2.7rem;
+    width: 2.7rem;
+    border-radius: 10%;
+    transition: height 1s linear, width 1s linear;
+}
+
+.footer-icon:hover{
+    height: 3rem;
+    width: 3rem;
+}
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width:1200px)
+{
+    .footer-section{
+        flex-direction: column;
+    }
+    .left-footer{
+        grid-template-columns: repeat(1,1fr);
+     }
+     .right-footer{
+        justify-content: flex-start;
+     }
+     .footer-heading{
+        margin-top: 2rem;
+        padding: 0.7rem;
+     }
+}
+
+
+.album{
+    width: 25%;
+}
+
+.player{
+    width: 50%;
+
+}
+
+.controls{
+    width: 25%;
+}
+
+.player-control-icon{
+    height: 1rem;
+    margin: 0.5rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover{
+    opacity: 1;
+}
+
+.player-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playback-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+}
+
+.progress-bar{
+    width: 50%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height:0.25rem;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+ .controls{
+ padding-right: 5rem;
+} 
+
+.controls_main{
+display: flex;
+justify-content: flex-end;
+gap: 0.5rem;
+} 
+
+.controls-icon{
+    height: 1.7rem;
+}
+
+.controls-icon-2{
+    height: 2.2rem;
+}
+
+.control-vol{
+ 
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.control-vol::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height:0.25rem;
+}
+
+.control-vol::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.album-player{
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+.album-player-song{
+    margin-top: 0.5rem;
+    height: 3rem;
+}
+.album-player-icon{
+  height: 2rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width:1100px)
+{
+    .album{
+         display: none;
+    }
+    .controls{
+       display: none;
+    }
+    .player{
+        margin: auto;
+    }
+}
